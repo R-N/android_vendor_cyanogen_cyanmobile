@@ -18,11 +18,15 @@ PRODUCT_PACKAGE_OVERLAYS += \
     vendor/cyanogen/overlay/tablet \
     vendor/cyanogen/overlay/encore
 
+# Add HDPI assets, in addition to LDPI
+PRODUCT_LOCALES += hdpi
+
 # Release name and versioning
 PRODUCT_RELEASE_NAME := encore
 PRODUCT_VERSION_DEVICE_SPECIFIC :=
 -include vendor/cyanogen/products/common_versions.mk
 
 PRODUCT_COPY_FILES +=  \
-    vendor/cyanogen/prebuilt/hdpi/media/bootanimation.zip:system/media/bootanimation.zip
+    vendor/cyanogen/prebuilt/hdpi/media/bootanimation.zip:system/media/bootanimation.zip\
+    vendor/cyanogen/prebuilt/hdpi/media/shutdownanimation.zip:system/media/shutdownanimation.zip
 
