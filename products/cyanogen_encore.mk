@@ -18,7 +18,7 @@ PRODUCT_PACKAGE_OVERLAYS += \
     vendor/cyanogen/overlay/tablet \
     vendor/cyanogen/overlay/encore
 
-# Add HDPI assets, in addition to LDPI
+# Add HDPI assets
 PRODUCT_LOCALES += hdpi
 
 # Release name and versioning
@@ -27,6 +27,7 @@ PRODUCT_VERSION_DEVICE_SPECIFIC :=
 -include vendor/cyanogen/products/common_versions.mk
 
 PRODUCT_COPY_FILES +=  \
-    vendor/cyanogen/prebuilt/hdpi/media/bootanimation.zip:system/media/bootanimation.zip\
-    vendor/cyanogen/prebuilt/hdpi/media/shutdownanimation.zip:system/media/shutdownanimation.zip
+    vendor/cyanogen/prebuilt/common/etc/init.d/07ksm:system/etc/init.d/07ksm\
+    vendor/cyanogen/prebuilt/wsvga/media/bootanimation.zip:system/media/bootanimation.zip\
+    vendor/cyanogen/prebuilt/wsvga/media/shutdownanimation.zip:system/media/shutdownanimation.zip
 
